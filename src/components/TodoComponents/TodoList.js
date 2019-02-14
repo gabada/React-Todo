@@ -6,8 +6,10 @@ const TodoList = props => {
         <ul>
             {props.tasks.map(task => (
                 <Todo
-                    task={task.task}
+                    task={task}
                     key={task.id}
+                    clearCompleted={props.clearCompleted}
+                    setCompleted={props.setCompleted}
                 />
             ))}
         </ul>
